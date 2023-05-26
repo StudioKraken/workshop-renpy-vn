@@ -12,6 +12,7 @@ init offset = -1
 style default:
     properties gui.text_properties()
     language gui.language
+    outlines [ (2, "#222") ]
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -229,6 +230,7 @@ style choice_button is default:
 
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
+    outlines [ (2, "#222") ]
 
 
 ## Quick Menu screen ###########################################################
