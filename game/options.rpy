@@ -30,6 +30,13 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+\"Invasão Geek: O Jogo\" foi criado por Studio Kraken
+
+studiokraken.com.br - studiokraken.itch.io
+
+Natal, Rio Grande do Norte, Brasil
+
+===
 """)
 
 
@@ -48,7 +55,7 @@ define build.name = "InvGeek"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
