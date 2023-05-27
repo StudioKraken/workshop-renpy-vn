@@ -36,8 +36,12 @@ default usou_magia = False
 
 label start:
 
+    scene black
+
     jump inicio
 
 label fimdejogo:
+
+    centered "{size=+30}OBRIGADO!{/size}\n\nstudiokraken.com.br"
 
     return

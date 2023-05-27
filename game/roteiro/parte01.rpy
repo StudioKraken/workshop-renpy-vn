@@ -1,44 +1,39 @@
 label inicio:
     # Recomenda-se usar os comandos "scene bg" para exibir cenários e "show" para exibir personagens. O comando "hide" serve para esconder tanto cenários quanto personagens.
+    scene bg fundo_preto
+
+    pause 1
 
     # Usa-se o comando "scene bg nome-do-cenario" para fazer aparecer o cenário desejado no jogo. Acrescenta-se o efeito de suavização a partir do preto com o comando "with dissolve"
-    scene bg fundo_preto with dissolve
-
     scene bg cidade with dissolve
 
     # Mostrando um personagem no centro da tela com o comando "show nome-do-personagem"
     show gian at center
 
-    # Esta é uma linha de diálogo. Você define quem vai falar e o que será falado escrevendo o nome do personagem, seguido da fala entre aspas.
-    gian "Olá! Meu nome é Giancarlo."
-
     # Mostrando um personagem à esquerda da tela
     show alex at left
-
-    # Esta é outra linha de diálogo. Para mudar o personagem que está falando, basta chamar um personagem diferente e escrever sua fala em seguida, sempre entre aspas.
-    alex "E eu sou Alexandre."
 
     # Mostrando um personagem à direita da tela
     show nat at right
 
-    nat "Prazer, Nataly."
+    with dissolve
 
-    gian "Hoje nós vamos apresentar uma workshop sobre criação de jogos narrativos lá no SESC Rio Branco."
+    gian "Caramba... o evento lá no SESC já vai começar e a gente ainda tá aqui na parada esperando o busão."
 
-    nat "E pra isso, vamos apresentar uma ferramenta muito bacana chamada Ren'Py!"
+    gian "Vai ser um evento muito massa. Não quero perder de jeito nenhum!"
 
-    alex "E o melhor: vocês vão poder praticar usando esta Visual Novel aqui como exemplo!!"
-
-    gian "Bom... o evento já vai começar e a gente ainda tá aqui na parada esperando o busão."
+    alex "Fora que fomos convidados, né? Vai ficar feio a gente chegar atrasado."
 
     # Menus de escolhas como este permitem dar rumos diferentes à história de um jogo.
     menu:
-        alex "Pois é... será que a gente vai chegar a tempo?"
+        alex "Será que a gente vai chegar a tempo?"
 
-        "Ah, relaxa! A gente vai chegar lá num passe de mágica.":
+        "Nataly: Ah, relaxa! A gente vai chegar lá num passe de mágica.":
+            # Se esta opção de escolha for selecionada no menu, a variável "usou_magia" receberá um valor verdadeiro (True).
+            $ usou_magia = True
             jump magica
 
-        "Opa! O ônibus tá chegando!":
+        "Nataly: Opa! O ônibus tá chegando!":
             jump busao
 
 label magica:
@@ -47,9 +42,15 @@ label magica:
 
     alex "Como assim, Nat?!"
 
+    gian "É, que história é essa de \"num passe de mágica\"?"
+
     nat "Só segurem na minha mão e confiem."
 
     nat "XABLAU!"
+
+    alex "AAAAHHHHHH!!"
+
+    gian "AAAAHHHHHH!!"
 
     # Para esconder os personagens antes de mudar de cenário, use o comando "hide".
     hide gian
@@ -58,20 +59,23 @@ label magica:
 
     hide nat
 
+    # defina o efeito "dissolve" em uma linha separada logo após os três "hides" acima para fazer os personagens sumirem suavemente, todos ao mesmo tempo.
     with dissolve
 
     # O comando "hide" pode ser acompanhado do efeito Pixellate. O primeiro número é o tempo, em segundos. O segundo é a intensidade da pixelização.
-    hide bg cidade with pixellate
+    scene bg fundo_preto with Pixellate(2.5, 10)
 
     jump xablau
 
 label busao:
 
-    nat "Opa! O ônibus tá chegando!"
+    nat "Opa! O ônibus tá chegando! Prestem atenção, meninos!"
 
     alex "Hehe, foi só você falar hein, Gian!"
 
-    gian "Ainda bem que demos sorte, hehe! Bom, vamos nessa!"
+    gian "Ainda bem que demos sorte. Valeu por avisar, Nat."
+
+    gian "Bom, vamos nessa!"
 
     hide gian
 
@@ -81,6 +85,6 @@ label busao:
 
     with dissolve
 
-    hide bg cidade with dissolve
+    scene bg fundo_preto with dissolve
 
     jump onibus
