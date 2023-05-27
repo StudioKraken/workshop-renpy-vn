@@ -471,7 +471,7 @@ translate None strings:
 
     # renpy/common/00gui.rpy:451
     old "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
-    new "Are you sure you want to return to the main menu?\nThis will lose unsaved progress."
+    new "Você quer mesmo retornar ao menu principal?\nTodo o progresso ainda não salvo será perdido."
 
     # renpy/common/00gui.rpy:452
     old "Are you sure you want to end the replay?"
