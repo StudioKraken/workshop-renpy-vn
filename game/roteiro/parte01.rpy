@@ -1,10 +1,16 @@
 label inicio:
+    # Para tocar uma música de fundo, use o comando "play music" seguido do nome que você definiu para a música lá no arquivo script.rpy.
+    # Caso prefira, também pode chamar o arquivo de música diretamente: play music "arquivo.mp3".
+    play music synth2
+
     # Recomenda-se usar os comandos "scene bg" para exibir cenários e "show" para exibir personagens. O comando "hide" serve para esconder tanto cenários quanto personagens.
     scene bg fundo_preto
 
+    # Comando de pausa, seguido do tempo de pausa, em segundos.
     pause 1
 
     # Usa-se o comando "scene bg nome-do-cenario" para fazer aparecer o cenário desejado no jogo. Acrescenta-se o efeito de suavização a partir do preto com o comando "with dissolve"
+    # - https://www.renpy.org/doc/html/transitions.html
     scene bg cidade with dissolve
 
     # Mostrando um personagem no centro da tela com o comando "show nome-do-personagem"
@@ -29,11 +35,12 @@ label inicio:
         alex "Será que a gente vai chegar a tempo?"
 
         "Nataly: Ah, relaxa! A gente vai chegar lá num passe de mágica.":
-            # Se esta opção de escolha for selecionada no menu, a variável "usou_magia" receberá um valor verdadeiro (True).
+            # Se esta opção de escolha for selecionada no menu, a variável "usou_magia" receberá um valor verdadeiro (True). Em seguida, o fluxo saltará para o trecho do jogo com a label "magica"
             $ usou_magia = True
             jump magica
 
         "Nataly: Opa! O ônibus tá chegando!":
+            # Se esta opção de escolha for selecionada no menu, o fluxo saltará para o trecho do jogo com a label "busao"
             jump busao
 
 label magica:
@@ -48,6 +55,10 @@ label magica:
 
     nat "XABLAU!"
 
+    # Para tocar um efeito sonoro, use o comando "play sound" seguido do nome que você definiu para o efeito lá no arquivo script.rpy.
+    # Caso prefira, também pode chamar o arquivo de efeito sonoro diretamente: play sound "arquivo.mp3".
+    play sound magia
+
     alex "AAAAHHHHHH!!"
 
     gian "AAAAHHHHHH!!"
@@ -61,6 +72,9 @@ label magica:
 
     # defina o efeito "dissolve" em uma linha separada logo após os três "hides" acima para fazer os personagens sumirem suavemente, todos ao mesmo tempo.
     with dissolve
+
+    # Use este comando para parar uma música que esteja sendo tocada.
+    stop music
 
     # O comando "hide" pode ser acompanhado do efeito Pixellate. O primeiro número é o tempo, em segundos. O segundo é a intensidade da pixelização.
     scene bg fundo_preto with Pixellate(2.5, 10)
@@ -84,6 +98,10 @@ label busao:
     hide nat
 
     with dissolve
+
+    stop music
+
+    play sound onibus
 
     scene bg fundo_preto with dissolve
 

@@ -2,7 +2,6 @@ label onibus:
 
     scene bg barzinho with dissolve
 
-    # Use o comando centered para exibir texto no meio da tela.
     centered "Alguns minutos de viagem depois..."
 
     show gian at center
@@ -50,6 +49,8 @@ label sesc:
     gian "Verdade! Bom, vamos nos preparar e nos apresentar."
 
     pause 1.0
+
+    play music synth1
 
     gian "Olá, pessoal! Boas vindas à nossa workshop Ren'Py: criando universos literários interativos!"
 

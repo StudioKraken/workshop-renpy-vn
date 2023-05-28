@@ -20,6 +20,7 @@ label encerrando:
 
     # Verificando o valor da variável. Se ele for verdadeiro, serão mostradas linhas de diálogo adicionais.
     if usou_magia == True:
+
         hide gian at center
 
         hide alex at left
@@ -31,6 +32,8 @@ label encerrando:
         pause 1
 
         scene bg cidade with dissolve
+
+        play music synth2
 
         show gian at center
 
@@ -59,7 +62,9 @@ label encerrando:
         scene bg fundo_preto with Pixellate(5, 10)
 
         jump fimdejogo
+
     else:
+
         hide gian at center
 
         hide alex at left
