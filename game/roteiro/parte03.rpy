@@ -2,11 +2,11 @@ label encerrando:
 
     scene bg barzinho with dissolve
 
-    show gian at center
+    show gian_s at center
 
-    show alex at left
+    show alex_s at left
 
-    show nat at right
+    show nat_s at right
 
     with dissolve
 
@@ -21,11 +21,11 @@ label encerrando:
     # Verificando o valor da variável. Se ele for verdadeiro, serão mostradas linhas de diálogo adicionais.
     if usou_magia == True:
 
-        hide gian at center
+        hide gian_s at center
 
-        hide alex at left
+        hide alex_s at left
 
-        hide nat at right
+        hide nat_s at right
 
         with dissolve
 
@@ -35,11 +35,11 @@ label encerrando:
 
         play music synth2
 
-        show gian at center
+        show gian_s at center
 
-        show alex at left
+        show alex_s at left
 
-        show nat at right
+        show nat_s at right
 
         with dissolve
 
@@ -51,11 +51,11 @@ label encerrando:
 
         nat "Hmmm... vou pensar no caso de vocês, hehehe!"
 
-        hide gian at center
+        hide gian_s at center
 
-        hide alex at left
+        hide alex_s at left
 
-        hide nat at right
+        hide nat_s at right
 
         with dissolve
 

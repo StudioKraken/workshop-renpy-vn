@@ -14,27 +14,27 @@ label inicio:
     scene bg cidade with dissolve
 
     # Mostrando um personagem no centro da tela com o comando "show nome-do-personagem"
-    show gian at center
-
-    # Mostrando um personagem à esquerda da tela
-    show alex at left
-
-    # Mostrando um personagem à direita da tela
-    show nat at right
-
-    with dissolve
+    show gian_s at center with dissolve
 
     gian "Caramba... o evento lá no SESC já vai começar e a gente ainda tá aqui na parada esperando o busão."
 
     gian "Vai ser um evento muito massa. Não quero perder de jeito nenhum!"
 
+    # Mostrando um personagem à esquerda da tela
+    show alex_s at left with dissolve
+
     alex "Fora que fomos convidados, né? Vai ficar feio a gente chegar atrasado."
+
+    # Mostrando um personagem à direita da tela
+    show nat_s at right with dissolve
+
+    nat "Verdade. A não ser que..."
 
     # Menus de escolhas como este permitem dar rumos diferentes à história de um jogo.
     menu:
         alex "Será que a gente vai chegar a tempo?"
 
-        "Nataly: Ah, relaxa! A gente vai chegar lá num passe de mágica.":
+        "Nataly: Tive uma ideia! A gente vai chegar lá num passe de mágica.":
             # Se esta opção de escolha for selecionada no menu, a variável "usou_magia" receberá um valor verdadeiro (True). Em seguida, o fluxo saltará para o trecho do jogo com a label "magica"
             $ usou_magia = True
             jump magica
@@ -77,7 +77,7 @@ label magica:
     stop music
 
     # O comando "hide" pode ser acompanhado do efeito Pixellate. O primeiro número é o tempo, em segundos. O segundo é a intensidade da pixelização.
-    scene bg fundo_preto with Pixellate(2.5, 10)
+    scene bg fundo_preto with Pixellate(3.5, 10)
 
     jump xablau
 

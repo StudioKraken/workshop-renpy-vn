@@ -4,11 +4,11 @@ label onibus:
 
     centered "Alguns minutos de viagem depois..."
 
-    show gian at center
+    show gian_s at center
 
-    show alex at left
+    show alex_s at left
 
-    show nat at right
+    show nat_s at right
 
     with dissolve
 
@@ -20,11 +20,11 @@ label xablau:
 
     scene bg barzinho with Pixellate(2.5, 10)
 
-    show gian at center
+    show gian_s at center
 
-    show alex at left
+    show alex_s at left
 
-    show nat at right
+    show nat_s at right
 
     with dissolve
 
@@ -54,13 +54,17 @@ label sesc:
 
     gian "Olá, pessoal! Boas vindas à nossa workshop Ren'Py: criando universos literários interativos!"
 
-    gian "Meu nome é {color=#ff0000}Giancarlo Silva{/color}. Sou diretor técnico e programador do {color=#bd9bf7}Studio Kraken!{/color}"
+    gian "Meu nome é {color=#3C586E}Giancarlo Silva{/color}. Sou diretor técnico, game designer e programador."
 
-    nat "Prazer, me chamo {color=#00ff00}Nataly Silva{/color}. No {color=#bd9bf7}Studio Kraken!{/color} atuo como diretora de arte e especialista em usabilidade e experiência de usuário."
+    nat "Prazer, me chamo {color=#360202}Nataly Silva{/color}. Sou diretora de arte e especialista em usabilidade e experiência de usuário."
 
-    alex "E eu sou {color=#00ffff}Alexandre Melo{/color}. Também sou programador e cuido do Controle de Qualidade no {color=#bd9bf7}Studio Kraken!{/color}."
+    alex "E eu sou {color=#ff0000}Alexandre Melo{/color}. Também sou programador e cuido do controle de qualidade."
 
-    gian "Hoje nós vamos apresentar uma workshop sobre criação de jogos narrativos."
+    gian "Nós três, juntamente com outros valorosos e importantes profissionais, formamos o Studio Kraken, que desde 2016 vem trabalhando na criação de experiências narrativas lúdicas, cativantes e divertidas."
+
+    nat "Fomos nós quem criamos NVDA, nosso primeiro jogo Visual Novel, que foi fruto de um bem-sucedido projeto apoiado pela Lei Aldir Blanc e que está à venda no Steam."
+
+    gian "Hoje nós vamos apresentar uma oficina sobre criação de jogos narrativos."
 
     nat "E pra isso, vamos apresentar uma ferramenta muito bacana chamada Ren'Py, além de ensinar conceitos sobre elaboração de roteiro e arte para Visual Novels."
 
@@ -68,11 +72,11 @@ label sesc:
 
     gian "Então é isso. Vamos começar!"
 
-    hide gian
+    hide gian_s
 
-    hide alex
+    hide alex_s
 
-    hide nat
+    hide nat_s
 
     with dissolve
 
@@ -80,6 +84,6 @@ label sesc:
 
     centered "Hora do slideshow."
 
-    pause 1.0
+    pause 10.0
 
     jump encerrando
