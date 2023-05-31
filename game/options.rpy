@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Minha Visual Novel")
+define config.name = _("Invasão Geek: O Jogo")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,6 +30,13 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+\"Invasão Geek: O Jogo\" foi criado por Studio Kraken
+
+studiokraken.com.br - studiokraken.itch.io
+
+Natal, Rio Grande do Norte, Brasil
+
+===
 """)
 
 
@@ -37,7 +44,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "MinhaVN"
+define build.name = "InvGeek"
 
 
 ## Sounds and music ############################################################
@@ -48,7 +55,7 @@ define build.name = "MinhaVN"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -62,7 +69,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/musica/Shooter_Synthwave_4.mp3"
 
 
 ## Transitions #################################################################
@@ -143,7 +150,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "MinhaVN-1684638237"
+define config.save_directory = "InvGeek-1684638237"
 
 
 ## Icon ########################################################################
