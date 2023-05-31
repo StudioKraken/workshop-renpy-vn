@@ -12,7 +12,6 @@ init offset = -1
 style default:
     properties gui.text_properties()
     language gui.language
-    outlines [ (2, "#222") ]
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -230,7 +229,6 @@ style choice_button is default:
 
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
-    outlines [ (2, "#222") ]
 
 
 ## Quick Menu screen ###########################################################
@@ -238,27 +236,43 @@ style choice_button_text is default:
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
 
+style quickmenu_window:
+    # background Image("gui/quick_menu/quickmenu_bg.png", xalign=0.0, yalign=0.0)
+    background Frame("gui/quick_menu/quickmenu_bg.png")
+    xalign 0.5
+    yalign 0.0
+    xsize 1200
+    ysize 125
+
+style quick_hbox:
+    spacing 0
+    xalign 0.3
+    yalign 0.3
+
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
+    window:
+            style_prefix "quickmenu"
 
-        hbox:
-            style_prefix "quick"
+            if quick_menu:
 
-            xalign 0.5
-            yalign 0.02
+                hbox:
+                    style_prefix "quick"
 
-            textbutton _("Voltar") action Rollback()
-            textbutton _("Histórico") action ShowMenu('history')
-            textbutton _("Avançar") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Salvar") action ShowMenu('save')
-            textbutton _("Salvar Rápido") action QuickSave()
-            textbutton _("Carregar Rápido") action QuickLoad()
-            textbutton _("Preferências") action ShowMenu('preferences')
+                    # xalign 0.5
+                    # yalign 0.02
+
+                    textbutton _("Voltar") action Rollback()
+                    textbutton _("Histórico") action ShowMenu('history')
+                    textbutton _("Avançar") action Skip() alternate Skip(fast=True, confirm=True)
+                    textbutton _("Auto") action Preference("auto-forward", "toggle")
+                    textbutton _("Salvar") action ShowMenu('save')
+                    textbutton _("Salvar Rápido") action QuickSave()
+                    textbutton _("Carregar Rápido") action QuickLoad()
+                    textbutton _("Preferências") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever

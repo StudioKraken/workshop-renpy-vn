@@ -2,31 +2,19 @@
 # - https://www.renpy.org/doc/html/dialogue.html#defining-character-objects
 
 # Gian: nome e cores do nome
-define gian = Character(
-    "Gian",
-    color="#3C586E",
-    who_outlines=[ (2, "#fff") ]
-)
+define gian = Character("Gian", color="#3C586E",)
 
 # Gian: sprite do personagem
 image gian_s = "images/personagens/Gian.png"
 
 # Nataly: nome e cores do nome
-define nat = Character(
-    "Nataly",
-    color="#360202",
-    who_outlines=[ (2, "#fff") ]
-)
+define nat = Character("Nataly", color="#360202",)
 
 # Nataly: sprite da personagem
 image nat_s = "images/personagens/Nataly.png"
 
 # Alexandre: nome e cores do nome
-define alex = Character(
-    "Alexandre",
-    color="#f00",
-    who_outlines=[ (2, "#222") ]
-)
+define alex = Character("Alexandre", color="#900000",)
 
 # Alexandre: sprite do personagem
 image alex_s = "images/personagens/Alexandre.png"

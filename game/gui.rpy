@@ -35,14 +35,14 @@ define gui.idle_color = '#ffffff'
 define gui.idle_small_color = '#ffffff'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#c16666'
+define gui.hover_color = '#900000'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#afafaf'
+define gui.selected_color = '#c16666'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#afafaf'
+define gui.insensitive_color = '#360202'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
