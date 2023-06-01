@@ -32,7 +32,7 @@ define gui.idle_color = '#ffffff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#ffffff'
+define gui.idle_small_color = '#000000'
 
 ## The color that is used for buttons and bars that are hovered.
 define gui.hover_color = '#900000'
@@ -42,7 +42,7 @@ define gui.hover_color = '#900000'
 define gui.selected_color = '#c16666'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#360202'
+define gui.insensitive_color = '#000000'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -50,7 +50,7 @@ define gui.muted_color = '#c16666'
 define gui.hover_muted_color = '#d69999'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#ffffff'
+define gui.text_color = '#000000'
 define gui.interface_text_color = '#ffffff'
 
 
@@ -190,7 +190,9 @@ define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
 define gui.quick_button_text_size = 21
-define gui.quick_button_text_idle_color = gui.idle_small_color
+# define gui.quick_button_text_idle_color = gui.idle_small_color
+define gui.quick_button_text_idle_color = "#ffffff"
+define gui.quick_button_text_hover_color = "#000000"
 define gui.quick_button_text_selected_color = gui.accent_color
 
 ## You can also add your own customizations, by adding properly-named variables.
@@ -211,7 +213,7 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
+define gui.choice_button_text_idle_color = '#000'
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = '#7070707f'
 

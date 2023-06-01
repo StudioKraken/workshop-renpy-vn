@@ -19,13 +19,14 @@ define alex = Character("Alexandre", color="#900000",)
 # Alexandre: sprite do personagem
 image alex_s = "images/personagens/Alexandre.png"
 
-# Definição dos cenários
+# Definição dos cenários e outras imagens
 # - https://www.renpy.org/doc/html/displaying_images.html#scene-statement
 image bg fundo_preto = "#000000"
-
 image bg cidade = "images/cenarios/cidade.png"
-
 image bg barzinho = "images/cenarios/bar.png"
+
+image krakenlogo = "images/misc/studio-kraken.png"
+image nvdasteam = "images/misc/nvda-steam.png"
 
 # Definição das músicas e dos efeitos sonoros
 # - https://www.renpy.org/doc/html/audio.html#audio
@@ -38,6 +39,12 @@ define audio.onibus = "sfx/onibus.mp3"
 # Definição de uma variável com um valor booleano (verdadeiro ou falso)
 # - https://www.renpy.org/doc/html/python.html
 default usou_magia = False
+
+# Definição de posicionamento personalizado para imagens centralizadas
+# - https://www.renpy.org/doc/html/atl.html
+transform imgcenter:
+    xalign 0.5
+    yalign 0.4
 
 # Início do ciclo de progressão do jogo: a progressão começará pela label "start" e terminará na label "fimdejogo".
 # O comando label permite dar um nome identificável - uma etiqueta - a um trecho do jogo, do qual e para o qual o fluxo de progressão pode fluir.
